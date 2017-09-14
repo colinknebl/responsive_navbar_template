@@ -1,0 +1,144 @@
+/*****************************************************/
+/**
+  *
+  * DESKTOP (COPY)
+  *
+  */
+@media only screen and (min-width: 701px) {
+  .mobile-menu,
+  .nav-btn,
+  .nav-menu-close-btn {
+    display: none; }
+
+  .content-wrapper-header {
+    border: 2px solid hotpink; }
+
+  .desktop-menu {
+    border: 2px solid purple; }
+    .desktop-menu .nav-menu-list {
+      padding: 0;
+      margin: 0;
+      border: 2px solid red; }
+      .desktop-menu .nav-menu-list .nav-menu-item {
+        display: inline-block;
+        border: 2px solid aqua; }
+        .desktop-menu .nav-menu-list .nav-menu-item .nav-menu-link {
+          border: 2px solid green; } }
+/*****************************************************/
+/**
+  *
+  * MOBILE (COPY)
+  *
+  */
+@media only screen and (max-width: 700px) {
+  * {
+    box-sizing: border-box; }
+
+  .desktop-menu {
+    display: none; }
+
+  .nav-mask,
+  .nav-menu {
+    position: fixed; }
+
+  .nav-mask,
+  body.has-active-menu {
+    overflow: hidden; }
+
+  .nav-menu {
+    z-index: 200; }
+
+  .nav-btn,
+  .nav-menu-close-btn {
+    cursor: pointer; }
+
+  /*****************************************************/
+  /**
+    *
+    * MASK (COPY)
+    *
+    */
+  .nav-mask {
+    z-index: 199;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: #000;
+    opacity: 0;
+    -webkit-transition: opacity .3s,width 0s .3s,height 0s .3s;
+    transition: opacity .3s,width 0s .3s,height 0s .3s; }
+
+  .nav-mask.is-active {
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s; }
+
+  /**
+    *
+    * END MASK
+    *
+    */
+  /*****************************************************/
+  /*****************************************************/
+  /**
+    *
+    * GENERAL ANIMATIONS (COPY)
+    *
+    */
+  .content-wrapper {
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s; }
+
+  .nav-menu {
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s; }
+
+  /**
+    *
+    * END GENERAL ANIMATIONS
+    *
+    */
+  /*****************************************************/
+  /************** COPY THE DESIRED MENU ACTION BELOW **************/
+  /*****************************************************/
+  /**
+    *
+    * SLIDE LEFT
+    *
+    */
+  .nav-menu-slide-left {
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    border: 2px solid red; }
+    .nav-menu-slide-left::-webkit-scrollbar {
+      display: none; }
+    .nav-menu-slide-left .nav-menu-link {
+      border: 2px solid aqua; }
+    .nav-menu-slide-left .nav-menu-close-btn {
+      border: 2px solid green; } }
+@media only screen and (max-width: 700px) and (min-width: 320px) {
+  .nav-menu-slide-left {
+    width: 300px; } }
+@media only screen and (max-width: 700px) {
+  .nav-menu-slide-left {
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%); } }
+@media only screen and (max-width: 700px) and (min-width: 320px) {
+  .nav-menu-slide-left {
+    -webkit-transform: translateX(-300px);
+    -ms-transform: translateX(-300px);
+    transform: translateX(-300px); } }
+@media only screen and (max-width: 700px) {
+  .nav-menu-slide-left.is-active {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); } }
+
+/*# sourceMappingURL=nav.css.map */
